@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* pour inclure les marges internes et les bordures dans la taille du parent */
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(image/pool.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: rgb(22, 108, 158);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  text-align: justify;
+  margin: 0 auto;
+  border: 4px dotted green;
+  padding: 50px 10px 50px 50px;
+  width: 50%;
+  background-color: burlywood;
+}
+
+button {
+  color: green;
+}
+
+.tortue {
+  text-align: left;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+
+h2 {
+  color: powderblue;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tortue h2 {
+  /* text-align: left; */
+  border: dotted;
+}
+
+/* #unique {
+  font-size: 25px;
+  text-align: right;
+} */
+
+.lorem1 {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-direction: row;
+}
+
+.lorem2 {
+  background-color: rgb(99, 15, 155);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
