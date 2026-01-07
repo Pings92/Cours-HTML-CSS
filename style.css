@@ -16,6 +16,25 @@ body {
   background-position: center;
 }
 
+.logo {
+  width: 10em; /* en px em or rem */
+}
+
+.monHeader {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.lien {
+  display: flex;
+  flex-direction: row;
+}
+ul li {
+  padding: 40px;
+  list-style-type: none ;
+}
+
 h1 {
   color: rgb(22, 108, 158);
   font-family: Arial, Helvetica, sans-serif;
@@ -37,7 +56,7 @@ button {
   background-color: red;
   display: flex;
   flex-direction: row;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 
 h2 {
@@ -69,3 +88,53 @@ h2 {
   align-items: center;
 }
 
+.haut {
+  border: 1px solid black;
+  background-color: coral;
+  width: 150px;
+  height: 150px;
+}
+
+.milieu {
+  border: 1px solid rgb(39, 158, 39);
+  background-color: rgb(255, 80, 197);
+  width: 150px;
+  height: 150px;
+}
+
+.bas {
+  border: 1px solid rgb(158, 39, 39);
+  background-color: rgb(80, 220, 255);
+  width: 150px;
+  height: 150px;
+  border: 10px black dotted;
+}
+
+.banderole {
+  display: flex;
+  background-color: rgba(0, 255, 255, 0.26);
+}
+
+.orange {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bleu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.totem {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+.imgbreakfast {
+  width: 150px;
+}
+
+.breakfast{
+display: flex;
+justify-content: space-evenly ;
+}
