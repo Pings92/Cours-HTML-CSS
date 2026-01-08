@@ -276,3 +276,17 @@ inline prend la largeur de son contenu span a img, button input label
   padding: 30px 0px 10px 0px;
   width: 100%;
 }
+
+.footer-logo{
+  width:50% ;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+}
