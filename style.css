@@ -268,3 +268,11 @@ inline prend la largeur de son contenu span a img, button input label
   transform: rotate(100deg);
   transform: scale(1.5); /* agrandit la fleche et le texte*/
 }
+
+.footer{
+  background-color: #e9dddd;
+  /*couleur sombre style disnai*/
+  color: white;
+  padding: 30px 0px 10px 0px;
+  width: 100%;
+}
