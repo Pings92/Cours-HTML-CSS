@@ -277,16 +277,34 @@ inline prend la largeur de son contenu span a img, button input label
   width: 100%;
 }
 
-.footer-logo{
-  width:50% ;
-}
+
 
 .footer-content {
   display: flex;
   justify-content: space-around;
+  background-color: #e9dddd;
+  align-items: center;
+}
+
+.footer-logo img{
+  width: 50px;
+  /*border: 3px solid blue*/ ;
 }
 
 .footer-links {
   display: flex;
   flex-direction: row;
+  justify-content: ;
+}
+
+.footer-socials{
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+
+.footer-bottom{
+  border-top: solid 2px black;
+  text-align: center;
+  background-color: #e9dddd;
 }
