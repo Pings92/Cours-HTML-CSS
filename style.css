@@ -1,3 +1,16 @@
+:root{
+  /* Couleurs par défaut (Light Mode) */
+  --bg-color: #f4eeee;
+  --text-color: #333333;
+  --card-bg: #f9f9f9F9;
+  --accent-color: #6c3cff;
+  
+  --primary: #f3f4f5;
+  --secondary: #f6f5;
+  --stylePrimary: display :flex, justify-content: center;
+
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -343,3 +356,147 @@ color:green;
 .survolMenu:link{
 color: red;
 }
+
+/* ----- section hover et animation de base ------- */
+/* Style de section */
+.demo-section {
+padding: 50px;
+text-align: center;
+background-color: var(--card-bg);
+}
+/* ---- Le bouton: animation légère (Fade + Shade)*/
+
+.btn-intro {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #6c3cff;
+  color: gold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  /* l'animation d'entré */
+  animation: slideUpFade 3s ease-out; /* slide up fade est le nom qu'on a défini pour l'animation, on va dire ensuite qu'elle part de quelque part pour aller quelque part*/
+}
+
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      /* transform: translateY(20px); */
+      transform: translateX(0px);
+    }
+
+    to {
+      opacity: 1;
+      /* transform: translateY(-20px); */
+      transform: translateX(90px);
+    }
+  }
+
+  /* Conteneur de lien*/
+  .links-container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .links-container a {
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  /* transition pour tous les hovers*/
+
+  .hover-color{
+    color: #3C9DFB;
+    padding: 5px 10px;
+  }
+
+  .hover-color:hover{
+    background-color: #3C9DFB;
+    color: #f3f3f3;
+    border-radius: 5px;
+  }
+
+  .hover-grow{
+    color: red;
+    display: inline-block;
+    /* important pour le transform */
+  }
+
+  .hover-grow:hover{
+    transform: scale(1.2) rotate(5deg);
+  }
+
+  /* 3. Pseudo élément: soulignement qui part du centre*/
+
+  .hover-underline{
+    color: var(--text-color);
+    position: relative; 
+  }
+
+  .hover-underline::after {
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #2ebf91;
+    transition: all 2s ease;
+  }
+
+  /* conventionel d'avoir :: avant after et before*/
+  .hover-underline:hover::after{
+    width: 100%;
+    left:0;
+  }
+
+  /* Effet de lueur*/
+
+  .hover-glow {
+    color: #ffa500;
+    border: 1px dotted #ffa500;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 15px #ffa500;
+    background-color: rgba(0, 255, 255, 0.26);
+  }
+
+/*5. reveal: apparition d'un caractère (emoji)*/
+/* mettre before à la place d'after le fera appaitre devant */
+  .hover-reveal::after {
+    content:'🚀' ;
+    opacity: 0;
+    margin-left: -25px;
+    transition: 0.3s;
+  }
+  .hover-reveal:hover::after{
+    opacity: 1;
+    margin-left: 0;
+  }
+
+  .fade-in{
+    width: 500px;
+    margin-top: 100em;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInMove 3s ease-out forwards;
+  }
+  .fadeinColor {
+    color: rgb(175, 9, 145);
+  }
+
+  @keyframes fadeInMove {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+  }
