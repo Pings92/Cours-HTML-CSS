@@ -284,27 +284,62 @@ inline prend la largeur de son contenu span a img, button input label
   justify-content: space-around;
   background-color: #e9dddd;
   align-items: center;
+  /* flex-wrap: wrap; pour le responsive, pour que le contenu s'adapte les different format*/
 }
 
 .footer-logo img{
   width: 50px;
   /*border: 3px solid blue*/ ;
+  
 }
 
 .footer-links {
   display: flex;
   flex-direction: row;
-  justify-content: ;
+  /* justify-content: space ar ; */
+}
+.footer-links a {
+  text-decoration: none;
+
+}
+.footer-links a:hover{ /* pour changer la couleur au survol*/
+  color: rgb(85, 163, 169);
 }
 
 .footer-socials{
   display: flex;
   justify-content: space-evenly;
   /* align-items: center; */
+  /* border: solid 2px black; */
+  gap: 10px;
 }
+.footer-socials img {
+  width: 24px;
 
+}
 .footer-bottom{
   border-top: solid 2px black;
   text-align: center;
-  background-color: #e9dddd;
+  background-color: #ffffff;
+  padding-top: 10px;
+}
+
+/* Hover/ au survol active AU MOMENT clic;  visited: page déjà visité */
+
+.survolMenu:hover{
+color: aqua;
+text-decoration: dotted;
+
+}
+
+.survolMenu:active{
+color: pink;
+}
+
+.survolMenu:visited{
+color:green;
+}
+
+.survolMenu:link{
+color: red;
 }

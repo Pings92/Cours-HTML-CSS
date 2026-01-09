@@ -1,0 +1,16 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    border: solid 3px blue;
+}
+
+ul{
+    list-style: none;
+    border: dotted 3px green;
+}
+
+.menuderoulant{
+ border: solid 2px black;
+ text-align: justify;
+ justify-content: space-between;
+}
