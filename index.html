@@ -29,6 +29,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
@@ -586,5 +587,45 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <!-- Modale -->
+    <section>
+      <a class="btn-ouvrir" href="#modal1"> Ouvrir la modale </a>
+      <div id="modal1" class="modal">
+        <a class="modal-overlay" href="#"></a>
+        <div class="modal-box">
+          <a class="close" href="#">X</a>
+          <div class="modal-content">
+            <h3>COUCOU C'EST MOI</h3>
+            <p>L'incroyable modale</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Alerte 
+     alert toggle va nous permettre de basculer entre deux états-->
+
+    <section>
+      <input type="checkbox" id="alert-toggle" />
+      <label for="alert-toggle" class="alert-btn">cliquer pour l'alerte</label>
+      <div class="alert-overlay">
+        <div class="alert-box">
+          <label for="alert-toggle" class="close">&times;</label>
+          <strong>ATTENTION</strong> Première alerte personnalisable
+        </div>
+      </div>
+    </section>
+    <!-- alerte via js
+     1- rentrer dans le head <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     2- choisir une alerte sur https://sweetalert2.github.io/#download 
+     3- l'inserer entre deux balise <script>-->
+    <script>
+      Swal.fire({
+        icon: "success",
+        title: "Ayayay",
+        text: "Y'a un cheveux dans la soupe",
+        footer: '<a href="#">Mais que pasa?</a>',
+      });
+    </script>
   </body>
 </html>

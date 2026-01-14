@@ -500,18 +500,150 @@ background-color: var(--card-bg);
     }
     
   }
-
   .imgCarousel {
     width: 500px;
   }
-
   /* .carousel-item {
     display: flex;
     justify-content: center;
   } */
-
   .navbar-brand img {
     width: 70px;
   }
+  /* css de la modale*/
+  .modal{
+    display: none ;
+    position: fixed ;
+    top: 0 ;
+    left: 0 ; 
+    width: 100vw ;
+    height: 100vh ;
+    background: rgba(0, 0, 0, 0.8) ;
+    z-index: 100 ; /*permet de superposé des éléments sur le flux. 
+    Valeur 0 de base.
+    Ne fonctionne qu'avec des éléments qui ont une position*/
+    opacity: 0 ;
+    transition: opacity 0.3s ease ;
+    align-items: center ;
+    justify-content: center ;
+  }
+  /* "target" permet de créer des pti interaction dynamique - necessite tjs un id pour fonctionner*/
+  .modal:target{ 
+    display: flex;
+    opacity: 1;
+  }
+  .modal-overlay, .modal-box, .modal-content, .close{
+    all: initial !important; 
+    /*"all" sélectionne toutes les propriété& css applicabble*/
+    /* "intitial" ramène à la valeur par défaut*/
+  }
+  .modal-overlay{
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .modal-box{
+    background: white !important;
+    margin: 2rem !important;
+    width: 90% !important;
+    max-width: 500px !important;
+    max-height: 90vh !important;
+    border-radius: 10px !important;
+    position: relative !important;
+    transform: scale(0.7) !important;
+    transition: transform 0.3s ease !important;
+    box-shadow: 0 20px 60px rgba(0,0,0, 0.5) !important;
+  }
+  .modal:target .modal-box{
+    transform: scale 1 !important;
+  }
+  .close{
+    position: absolute !important;
+    top: 15px !important;
+    right: 20px !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    color: #333 !important;
+    z-index: 50 !important;
+    line-height: 1 !important;
+  }
 
-  
+  .modal-content{
+    padding: 50px 20px 20px !important;
+    height: calc(90vh - 4rem) !important;
+    overflow-y: auto !important;
+  }
+
+  .btn-ouvrir {
+    display: inline-block !important;
+    padding: 12px 24px !important;
+    background: #673cff !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+  }
+
+  /* Alert*/
+ #alert-toggle{
+  display: none;
+ }  
+ .alert-btn{
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+ }
+ .alert-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+ }
+ .alert-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: all 0.3s ease;
+ }
+
+ .close{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+ }
+
+ .close:hover{
+  color: #e9e9e9;
+ }
+
+ #alert-toggle:checked~.alert-overlay{
+  opacity: 1;
+  visibility: visible;
+ }
+
+#alert-toggle:checked~.alert-overlay .alert-box{
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  } 
