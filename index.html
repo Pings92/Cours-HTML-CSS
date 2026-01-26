@@ -627,5 +627,305 @@
         footer: '<a href="#">Mais que pasa?</a>',
       });
     </script>
+    <!---------------- Introduction à JS-->
+    <!-- MA VERSION--> 
+    <!-- <script>
+      userText=prompt("En quoi puis-je vous aider?");
+      if (userText=='Bonjour'){
+      alert("Bonjour à toi");
+    }else if (userText=='Ca va') {
+      alert("ça va merci et toi?");
+    }else{
+      alert("je n'ai pas compris");
+    }
+    </script> -->
+    <!-- -----------Version Jeremi ----------->
+    <!-- <script>
+      function chatbot{
+        // Inviter l'utilisateur à saisir une phrase 
+      let userInput=prompt("Dis moi quelque chose: (Deux réponse possibble, Bonjour ça va et)");
+
+      //Comparer la saisie de l'utilisateur avec différentes réponses attendue
+        if (userInput.toLowerCase() === 'bonjour'){
+          alert("Bonjour à toi !");
+        }else if (userInput.toLowerCase() === "tu vas bien'?") {
+          alert("Bien et toi?");
+        }else{
+          alert("Désolé, je n'ai pas compris");
+        }
+      }
+
+      chatbot()
+    </script> -->
+    <!-- <button onclick="chatbot()">Mon chatbot</button> -->
+
+        <!-- <script>
+      userText=prompt("Dis moi quelque chose: (Deux réponses possible: 'Bonjour' ou 'je t'aime')");
+      if (userText=='Bonjour'){
+        userText=prompt("Bonjour! Ca va?");
+        if(userText == 'oui'){
+          alert("Je suis content pour toi.");
+        } else if (userText == 'non'){
+          alert("Je suis désolé pour toi. Oups! Je file");
+        }
+      }else if (userText == "je t'aime") {
+      alert("Euhhhhhhhhhh j'ai un coeur de fer");
+      }else{
+      alert("je n'ai pas compris");
+    }
+    </script> -->
+<!----- EXO sur les "if"--------->
+<script>
+//   userCoffee = prompt("Etes-vous plutôt café long ou court (Ristretto, Espresso, Doppio? Lungo)")
+//   // while (userCoffee != "ristretto" || userCoffee != "lungo" || userCoffee != "doppio" || userCoffee !=espresso) {
+//   //   userCoffee = prompt("Etes-vous plutôt café long ou court (Ristretto, Espresso, Doppio? Lungo)")
+//   // }
+//   if (userCoffee.toLowerCase() === "ristretto"){
+//     userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+//       if (userMilk.toLowerCase() === "oui"){
+//         userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " avec lait et avec glaçon");
+//           } else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " avec lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           }
+//         }else if (userMilk.toLowerCase() === "non"){
+//           userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " sans lait et avec glaçon");
+//           }else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " sans lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           } 
+//         }
+//         else{
+//           alert("Je ne comprends pas")
+//         }
+//   }else if(userCoffee.toLowerCase() === "espresso"){
+//     userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+//       if (userMilk.toLowerCase() === "oui"){
+//         userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " avec lait et avec glaçon");
+//           } else if (userIce.toLowerCase()=="non"){
+//           alert("Voici votre " + userCoffee + " avec lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           }
+//         }else if (userMilk.toLowerCase() == "non"){
+//           userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() == "oui"){
+//           alert("Voici votre " + userCoffee + " sans lait et avec glaçon");
+//           }else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " sans lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           } 
+//         }
+//         else{
+//           alert("Je ne comprends pas")
+//         }
+//   }else if(userCoffee.toLowerCase() === "doppio"){
+//     userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+//       if (userMilk.toLowerCase() === "oui"){
+//         userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " avec lait et avec glaçon");
+//           } else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " avec lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           }
+//         }else if (userMilk.toLowerCase() === "non"){
+//           userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " sans lait et avec glaçon");
+//           }else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " sans lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           } 
+//         }
+//         else{
+//           alert("Je ne comprends pas")
+//         }
+//   }else if(userCoffee.toLowerCase() == "lungo"){
+//     userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+//       if (userMilk.toLowerCase() === "oui"){
+//         userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " avec lait et avec glaçon");
+//           } else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " avec lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           }
+//         }else if (userMilk.toLowerCase() === "non"){
+//           userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+//           if (userIce.toLowerCase() === "oui"){
+//           alert("Voici votre " + userCoffee + " sans lait et avec glaçon");
+//           }else if (userIce.toLowerCase() === "non"){
+//           alert("Voici votre " + userCoffee + " sans lait et sans glaçon");
+//           } else{
+//             alert("Je n'ai pas compris")
+//           } 
+//         }
+//         else{
+//           alert("Je ne comprends pas")
+//         }
+//     }else{
+//     alert("je ne comprends pas")
+//     }
+// </script>
+<!------------------ Boucle for (cours) --------------->
+ <!-- <script>
+  for (let monNombre = 1; monNombre <= 10000; monNombre++){
+    console.log(monNombre);
+} -->
+ </script>
+ <!------------------- test du choix du cafe avec switch case ------------>
+<!-- <script>
+  userDrink=prompt("Etes-vous plutôt café long ou court (Ristretto, Espresso, Doppio? Lungo)")
+  switch (userDrink){
+    case "ristretto":
+          userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+          if (userMilk.toLowerCase() === "oui"){
+          userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+            if (userIce.toLowerCase() === "oui"){
+              alert("Voici votre " + userDrink + " avec lait et avec glaçon");
+            } else if (userIce.toLowerCase()=="non"){
+              alert("Voici votre " + userDrink + " avec lait et sans glaçon");
+            } else{
+              alert("Je n'ai pas compris")
+            }
+        }else if (userMilk.toLowerCase() == "non"){
+          userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+          if (userIce.toLowerCase() == "oui"){
+          alert("Voici votre " + userDrink + " sans lait et avec glaçon");
+          }else if (userIce.toLowerCase() === "non"){
+          alert("Voici votre " + userDrink + " sans lait et sans glaçon");
+          } else{
+            alert("Je n'ai pas compris")
+          } 
+        }
+        else{
+          alert("Je ne comprends pas")
+        }
+   case "espresso":
+          userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+          if (userMilk.toLowerCase() === "oui"){
+          userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+            if (userIce.toLowerCase() === "oui"){
+              alert("Voici votre " + userDrink + " avec lait et avec glaçon");
+            } else if (userIce.toLowerCase()=="non"){
+              alert("Voici votre " + userDrink + " avec lait et sans glaçon");
+            } else{
+              alert("Je n'ai pas compris")
+            }
+        }else if (userMilk.toLowerCase() == "non"){
+          userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+          if (userIce.toLowerCase() == "oui"){
+          alert("Voici votre " + userDrink + " sans lait et avec glaçon");
+          }else if (userIce.toLowerCase() === "non"){
+          alert("Voici votre " + userDrink + " sans lait et sans glaçon");
+          } else{
+            alert("Je n'ai pas compris")
+          } 
+        }
+        else{
+          alert("Je ne comprends pas")
+        }
+   case "lungo":
+          userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+          if (userMilk.toLowerCase() === "oui"){
+          userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+            if (userIce.toLowerCase() === "oui"){
+              alert("Voici votre " + userDrink + " avec lait et avec glaçon");
+            } else if (userIce.toLowerCase()=="non"){
+              alert("Voici votre " + userDrink + " avec lait et sans glaçon");
+            } else{
+              alert("Je n'ai pas compris")
+            }
+        }else if (userMilk.toLowerCase() == "non"){
+          userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+          if (userIce.toLowerCase() == "oui"){
+          alert("Voici votre " + userDrink + " sans lait et avec glaçon");
+          }else if (userIce.toLowerCase() === "non"){
+          alert("Voici votre " + userDrink + " sans lait et sans glaçon");
+          } else{
+            alert("Je n'ai pas compris")
+          } 
+        }
+        else{
+          alert("Je ne comprends pas")
+        }
+   case "doppio":
+          userMilk = prompt('Souhaitez-vous du lait avec? Oui/Non');
+          if (userMilk.toLowerCase() === "oui"){
+          userIce = prompt("Avec ou sans glaçon? (Oui/Non)");
+            if (userIce.toLowerCase() === "oui"){
+              alert("Voici votre " + userDrink + " avec lait et avec glaçon");
+            } else if (userIce.toLowerCase()=="non"){
+              alert("Voici votre " + userDrink + " avec lait et sans glaçon");
+            } else{
+              alert("Je n'ai pas compris")
+            }
+        }else if (userMilk.toLowerCase() == "non"){
+          userIce=prompt("Avec ou sans glaçon? (Oui/Non)");
+          if (userIce.toLowerCase() == "oui"){
+          alert("Voici votre " + userDrink + " sans lait et avec glaçon");
+          }else if (userIce.toLowerCase() === "non"){
+          alert("Voici votre " + userDrink + " sans lait et sans glaçon");
+          } else{
+            alert("Je n'ai pas compris")
+          } 
+        }
+        else{
+          alert("Je ne comprends pas")
+        }
+  }
+</script> -->
+<!---------- EXO FIZBUZZZ--------->
+<script>
+for(let monNombre=1; monNombre<= 199; monNombre++){
+  if (monNombre%3 == 0 && monNombre%5 == 0){
+    console.log("Fizzbuzz")
+  }
+  else if (monNombre%3 == 0) {
+    console.log("Fizz")
+  }
+  else if (monNombre%5 == 0){
+    console.log("Buzz")
+  }
+  else{
+    console.log(monNombre)
+  }
+      }
+</script>
+<!------ EXO GUES The number ----------->
+<script>
+  function guessTheNumber(){
+    computerNumber = Math.round(Math.random()*100);
+    console.log(computerNumber)
+    for (i = 1; i <= 10; i++){
+      playerNumber = prompt("Veuillez entrer un nombre: ");
+      if (playerNumber == computerNumber){
+      alert("WOUHOU!!! Vous avez trouver le nombre mystère qui est " + computerNumber);
+      return;
+      }else if (playerNumber >= computerNumber) {
+      alert("Plus petit! Il vous reste " + (10-i) + " essaies." )
+      }else if (playerNumber <= computerNumber){
+      alert("Plus grand! Il vous reste " + (10-i) + " essaies." )
+      }
+    }
+  }
+  guessTheNumber()
+</script>
+<script>
+  
+</script>
   </body>
 </html>
