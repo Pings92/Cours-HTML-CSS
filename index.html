@@ -889,7 +889,7 @@
   }
 </script> -->
 <!---------- EXO FIZBUZZZ--------->
-<script>
+<!-- <script>
 for(let monNombre=1; monNombre<= 199; monNombre++){
   if (monNombre%3 == 0 && monNombre%5 == 0){
     console.log("Fizzbuzz")
@@ -904,9 +904,9 @@ for(let monNombre=1; monNombre<= 199; monNombre++){
     console.log(monNombre)
   }
       }
-</script>
+</script> -->
 <!------ EXO GUES The number ----------->
-<script>
+<!-- <script>
   function guessTheNumber(){
     computerNumber = Math.round(Math.random()*100);
     console.log(computerNumber)
@@ -923,9 +923,165 @@ for(let monNombre=1; monNombre<= 199; monNombre++){
     }
   }
   guessTheNumber()
-</script>
+</script> -->
+<!--------EXO 5 JS------------------->
 <script>
-  
+  function divideByTwo(number){
+    return number/2;
+  }
+  let n = Math.round(Math.random()*100);
+  divideByTwo(n);
+
+  function divideByTwo(n){
+    return n/2;
+  }
+  let n = Math.round.random();
+  divideByTwo(n)
 </script>
+<!------------------- EXO--------------------->
+<script>
+  function multiplyByTwo(nombre){
+    return nombre*2;
+  }
+  multiplyByTwo(10);
+</script>
+<!------------------- EXO SOMME DE PARAMETRE--------------------->
+<script>
+  function sumTwoParameters(n,n2){
+  return n + n2;}
+  sumTwoParameters(2,4);
+</script>
+<!--------------- EXO SIGNE ---------------------->
+<script>
+  function underOver(n){
+    if (n == 0){
+      console.log("Nul");
+    }
+    else if (n < 0) {
+      console.log("Négatif");
+    }
+    else if (n > 0){
+      console.log("Positif");
+    }
+  }
+  userNumber = prompt("Entrer un nombre:");
+  underOver(userNumber);
+</script>
+<!------------------- EXO FACTORIEL--------------------->
+<script>
+  function factorial(n){
+    let result = 1;
+    for(i = 1; i <= n; i++){
+      result *=i ;
+      //ligne du dessus reient à result = result * i 
+      // console.log(result);
+    }
+    return result;
+  }
+  console.log(factorial(2),factorial(4),factorial(6),factorial(8));
+</script>
+<!-- -----------------CHI FOU MI TENTATIVE 1---------------------------->
+ <script>
+  function compareTentative 1(choix1, choix2){
+    if ( choix1 == choix2){
+    return("Match nul");
+    }
+    else if (choix1 == "Pierre" && choix2 == "Feuille"){
+    // return ("Feuille l'emporte sur Pierre")
+    return (choix2);
+    }
+    else if (choix1 == "Feuille" && choix2 == "Ciseaux"){
+    // return ("Ciseaux l'emporte sur Feuille")
+    return (choix2);
+    }
+    else if(choix1 == "Ciseaux" && choix2 == "Pierre"){
+      return (choix2);
+    }
+    
+    else if (choix1 == "Pierre" && choix2 == "Ciseaux"){
+    // return ("Pierre l'emporte sur Ciseaux ")
+    return (choix1);
+    }
+    else if (choix1 == "Feuille" && choix2 == "Pierre"){
+    // return ("Feuille l'emporte sur Pierre")
+    return (choix1);
+    }
+    else if (choix1 == "Ciseaux" && choix2 == "Feuille"){
+      return (choix1)
+    }
+ }
+ //--------------BOUT DE CODE VALIDE-------------
+  function converter(){
+    if (randomNumber<=33){
+    return choixOrdi = "Feuille";
+    }
+    else if (randomNumber>33 && randomNumber<= 66){
+    return choixOrdi = "Pierre";
+    }
+    else {
+    return choixOrdi = "Ciseaux";
+    }
+  }
+  let randomNumber = Math.round(Math.random()*100);
+  // converter(randomNumber);
+  // console.log(randomNumber);
+  // console.log(choixOrdi);
+//------------- FIN BOUT DE CODE VALIDE -----------
+
+  let computerChoice = converter(randomNumber);
+  let playerChoice = prompt("Choisissez parmis Pierre, Feuille, Ciseaux");
+  // console.log(playerChoice);
+  console.log(computerChoice);
+  choix1 = playerChoice;
+  choix2 = computerChoice;
+
+//--------------TENTATIVE 2-----------------------------
+
+  function compare(choix1, choix2){
+  if (choix1 == "Pierre"){
+    if (choix1 == choix2){
+      return Match nul;
+    }else if (choix2 == "Feuille"){
+      return"ordi";
+    }else{
+      return "joueur";
+    }
+  }else if (choix1 == "Ciseaux"){    
+    if (choix2 == "Pierre"){
+      return"ordi";
+    }else{
+      return "joueur";
+    }
+  }else if (choix1 == "Feuille"){
+    if (choix2 == "Pierre"){
+      return choix1;
+    }else {
+      return choix2;
+    }
+  }
+  }
+  compare(choix1,choix2);
+  
+  let playerScore = 0;
+  let comptuterScore = 0;
+  let manche = 0;
+
+  function chiFouMi{
+  for(manche=0; manche<=3; manche++){
+    // Génération nombre ordi
+
+    //Saisie nombre du joueur
+
+    //Comparaison 
+
+    //Calcul du score joueur / ordi if compare=joeur, scoreJoeur++ else if compare = ordi scoreOrdi++
+
+
+  }
+  }
+ 
+</script>
+
+
   </body>
 </html>
