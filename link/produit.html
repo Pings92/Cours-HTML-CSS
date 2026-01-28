@@ -7,5 +7,224 @@
 </head>
 <body>
     <h1>Produit</h1>
+<script>
+//--------------TENTATIVE 2-----------------------------
+function compare(choix1,choix2){
+        if (choix1 == choix2){
+            return "Match nul";
+        }
+        if (choix1 == "Pierre"){
+            if (choix2 == "Ciseaux"){
+                return "ordi";
+            } else{
+                return "joueur";
+            }
+        } else if (choix1 == "Ciseaux"){    
+            if (choix2 == "Feuille"){
+                return "ordi";
+            } else {
+                return "joueur";
+            }
+        } else if (choix1 == "Feuille"){
+            if (choix2 == "Pierre"){
+                return "ordi";
+            } else {
+                return "joueur";
+            }
+        }
+    }
+
+function chiFouMi(){
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for(i = 0; i < 3; i++){
+
+    // Génération nombre ordi
+        let computerChoice = Math.random() < 0.33 ? "Pierre" : Math.random() < 0.66 ? "Feuille" : "Ciseaux";
+
+        console.log("Choix de l'ordi " + computerChoice)
+        //Saisie nombre du joueur
+        let playerChoice = prompt("Choisissez parmis Pierre, Feuille, Ciseaux");
+        console.log("Saisie du joueur : " + playerChoice)
+        let result = compare(computerChoice, playerChoice);
+
+        if (result == "joueur"){
+            playerScore++;
+        }else{
+            computerScore++;
+        }
+    }
+        
+        console.log("Score Joueur" + playerScore + " Score Ordi" + computerScore)
+
+    if (playerScore > computerScore){
+        alert("Le joueur a gagné : " + playerScore + "-" + computerScore)
+    }else{
+        alert("L'ordi a gagné : " + computerScore + "-" + playerScore)
+    }
+}   
+  chiFouMi()
+</script>
+
+<script>
+    //------------Exo Pair et Impair---------
+    let pair = 0;
+    let impair = 0;
+    for (i = 0; i < 20 ; i++){
+        if (i%2 == 0){
+            pair++
+        }
+        else{
+            impair++;
+        }
+    }
+    //alert("Il y a " + pair +" nombre pairs et " + impair + "nombre impairs.")
+    alert(`Il y a ${pair} nombre pair et ${impair} nombre impair`)
+</script>
+<!--------------- table de multiplication ------------------>
+<script>
+    for (i = 1; i <= 5; i++){
+        for (j = 1 ; j<=10 ; j++){
+            result= j*i;
+            if (result >= 30){
+                console.log(`${i} x ${j} = ${result} GROS RESULTAT`);
+            }
+            else if (result%5 == 0){
+                console.log(`${i} x ${j} = ${result} Multiple de 5`);
+            }
+            else{
+                console.log(`${i} x ${j} = ${result}`);
+            }
+        }
+    }
+</script>
+<script>
+    let fruits = ['Mangue', 'Raisin', 'Figue'];
+    fruits[2] = 'Banane';
+    console.log(fruits);
+    console.log(fruits.length)
+    fruits.push('Corossol');
+    console.log(fruits);
+    console.log(fruits.length);
+    fruits.pop();
+    console.log(fruits);
+    fruits.indexOf('Banane')
+
+    let fruits1 = ['Mangue', 'Raisin', 'Figue'];
+    let fruits2 = ['Fraise','Goyave', 'Ananas'];
+    let fruits3 = fruits1.concat(fruits2);
+    console.log(fruits3);
+    fruits3.slice(2,5)
+    console.log(fruits3.slice(2,5))
+</script>
+<!--------EXO 7 ------------>
+<script>
+let jours=['lun', '007', 'mer', 'jeu', 'ven', 'sam', "BUG"];
+//1
+jours.pop();
+//2
+console.log(jours);
+//3
+jours.push('dim');
+//4
+jours[1]= 'mar';
+//5
+console.log(jours.length);
+//6
+console.log(jours[2]);
+</script>
+<!-- -----------EXO PART2------------>
+ <script>
+    let fruits = ['Mangue', 'Raisin', 'Figue', 'Kiwi'];
+
+    console.log (fruits); // 1. afficher leste des fruits dispo 
+    clientOrder = prompt(`Quel fruit désirez-vous? (${fruits})`); // 2. Demander quel fruit au client
+
+    disponibility = fruits.indexOf(clientOrder);
+    if (disponibility == -1){
+            console.log("indisponible");
+        }
+        else{
+            console.log("ok!")
+            for (j = 0; j <= fruits.length; j++){
+                if (fruits[j] == clientOrder){
+                    fruits.splice(j,1);
+                }else{
+                }
+        }
+    }
+    console.log (fruits);
+ </script>
+ <!----- Version sans boucle for -------->
+ <script>
+    let fruits = ['Mangue', 'Raisin', 'Figue', 'Kiwi'];
+
+    console.log (fruits); // 1. afficher leste des fruits dispo 
+    clientOrder = prompt(`Quel fruit désirez-vous? (${fruits})`); // 2. Demander quel fruit au client
+
+    disponibility = fruits.indexOf(clientOrder);
+
+    if (disponibility !== -1){
+        fruits.splice(fruits.indexOf(clientOrder),1)
+        console.log("ok")
+    }
+    else{
+        console.log("indisponible");
+    }
+    console.log (fruits);
+ </script>
+
+ <!--------------------JEU DU PENDU---------------------->
+ <script>
+    var mauvaisesLettres =[]
+    var lettresAttendues = ['s', 'u', 'p', 'e', 'r']
+    var playerTry = 10
+    console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+
+    for (i = 1; i <= 10; i++){
+        if (mauvaisesLettres.length > 10){
+            console.log("Dommage c'est perdu")
+        } 
+        else if (lettresAttendues == 0){
+            console.log("Bravo c'est gagné")
+        }
+        else {
+            let userLetter = prompt("Quel est votre lettre?")
+
+            presente = lettresAttendues.indexOf(userLetter)
+
+            if(presente !== -1){
+                lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1)
+                console.log("Whouhou! Vous avez trouvez une lettre")
+            }
+            else{
+                mauvaisesLettres.push(userLetter)
+                console.log("Coin! Try again")
+            }
+            console.log(mauvaisesLettres)
+            console.log(mauvaisesLettres.length)
+            playerTry--
+            console.log(`Il vous reste ${playerTry} essais.`)
+        }
+        //OPTIONEL CAR VOUS AVEZ PERDU NE FONCTIONNE PAS
+        if (mauvaisesLettres.length == 10){
+            console.log("Vous avez perdu");
+        }else{
+            console.log("Vous avez gagné");
+            }
+        }
+    
+    </script>
+    <!-- <script>
+        for (i = 1; i <= 10; i++){
+
+        //i = point de départ; on va boucler tant que i est inférieur ou égal à 10, quand on a fait un tour on ajoute 1 à i 
+        console.log("Seconde " + i + " : Bip!");
+        //On affiche la phrase Seconde avec la valeur de "i" (sachant que i augement à chaque tour de la boucle jusqu'à ce qu'on arrive à 10
+        console.log (`Seconde ${i} : Bip!`);
+        // Même chose mais écrit différement
+    }    
+</script> -->
 </body>
 </html>
