@@ -64,41 +64,45 @@ function chiFouMi(){
         alert("L'ordi a gagné : " + computerScore + "-" + playerScore)
     }
 }   
-  chiFouMi()
+  //chiFouMi()
 </script>
-
+<!------------Exo Pair et Impair--------->
 <script>
-    //------------Exo Pair et Impair---------
-    let pair = 0;
-    let impair = 0;
-    for (i = 0; i < 20 ; i++){
-        if (i%2 == 0){
-            pair++
+    function pairImpair(){
+        let pair = 0;
+        let impair = 0;
+        for (i = 0; i < 20 ; i++){
+            if (i%2 == 0){
+                pair++
+            }
+            else{
+                impair++;
+            }
         }
-        else{
-            impair++;
-        }
+        //alert("Il y a " + pair +" nombre pairs et " + impair + "nombre impairs.")
+        alert(`Il y a ${pair} nombre pair et ${impair} nombre impair`)        
     }
-    //alert("Il y a " + pair +" nombre pairs et " + impair + "nombre impairs.")
-    alert(`Il y a ${pair} nombre pair et ${impair} nombre impair`)
 </script>
 <!--------------- table de multiplication ------------------>
 <script>
-    for (i = 1; i <= 5; i++){
-        for (j = 1 ; j<=10 ; j++){
-            result= j*i;
-            if (result >= 30){
-                console.log(`${i} x ${j} = ${result} GROS RESULTAT`);
+    function multiplicationTable(){
+        for (i = 1; i <= 5; i++){
+            for (j = 1 ; j<=10 ; j++){
+                result= j*i;
+                if (result >= 30){
+                    console.log(`${i} x ${j} = ${result} GROS RESULTAT`);
+                }
+                else if (result%5 == 0){
+                    console.log(`${i} x ${j} = ${result} Multiple de 5`);
+                }
+                else{
+                    console.log(`${i} x ${j} = ${result}`);
+                }
             }
-            else if (result%5 == 0){
-                console.log(`${i} x ${j} = ${result} Multiple de 5`);
-            }
-            else{
-                console.log(`${i} x ${j} = ${result}`);
-            }
-        }
+        }        
     }
 </script>
+<!-------------- COURS --------------------------------->
 <script>
     let fruits = ['Mangue', 'Raisin', 'Figue'];
     fruits[2] = 'Banane';
@@ -177,149 +181,191 @@ console.log(jours[2]);
 
  <!--------------------JEU DU PENDU---------------------->
  <script>
-    var mauvaisesLettres =[]
-    var lettresAttendues = ['s', 'u', 'p', 'e', 'r']
-    var playerTry = 10
-    console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+    function hangManGame(){
+        var mauvaisesLettres =[]
+        var lettresAttendues = ['s', 'u', 'p', 'e', 'r']
+        var playerTry = 10
+        console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
 
-    for (i = 1; i <= 11; i++){
-        if (mauvaisesLettres.length >= 10){
-            console.log("Dommage c'est perdu");
-        } 
-        else if (lettresAttendues == 0){
-            console.log("Bravo c'est gagné");
-        }
-        else {
-            let userLetter = prompt("Quel est votre lettre?");
-
-            presente = lettresAttendues.indexOf(userLetter);
-
-            if(presente !== -1){
-                lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
-                console.log("Whouhou! Vous avez trouvez une lettre");
+        for (i = 1; i <= 11; i++){
+            if (mauvaisesLettres.length >= 10){
+                console.log("Dommage c'est perdu");
+            } 
+            else if (lettresAttendues == 0){
+                console.log("Bravo c'est gagné");
             }
-            else{
-                mauvaisesLettres.push(userLetter);
-                console.log("Coin! Try again");
-            }
-            console.log(mauvaisesLettres);
-            console.log(mauvaisesLettres.length);
-            playerTry-- ;
-            console.log(`Il vous reste ${playerTry} essais.`);
-        }
-    }
-    
-    </script>
-    <!-- <script>
-        for (i = 1; i <= 10; i++){
+            else {
+                let userLetter = prompt("Quel est votre lettre?");
 
-        //i = point de départ; on va boucler tant que i est inférieur ou égal à 10, quand on a fait un tour on ajoute 1 à i 
-        console.log("Seconde " + i + " : Bip!");
-        //On affiche la phrase Seconde avec la valeur de "i" (sachant que i augement à chaque tour de la boucle jusqu'à ce qu'on arrive à 10
-        console.log (`Seconde ${i} : Bip!`);
-        // Même chose mais écrit différement
-    }    
-</script> -->
-<!----- EXo JEux PEndu Complixifié-->
-<!-------- On indique au joueur si une lettre à déjà été tapé-->
-<!-------- On retire tous les lettres en double-->
- <script>
-    var mauvaisesLettres =[]
-    var lettresAttendues = ['k', 'a', 'y', 'a', 'k']
-    var playerTry = 10
-    var lettresTrouve = []
-    console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+                presente = lettresAttendues.indexOf(userLetter);
 
-    for (i = 1; i <= 11; i++){
-        if (playerTry == 0){
-            console.log(`Dommage c'est perdu! Le mot attendu était ${lettresAttendues}`);
-        } 
-        else if (lettresAttendues == 0){
-            console.log(`Bravo c'est gagné! Le mot attendu était ${lettresAttendues}`);
-        }
-        else {
-            let userLetter = prompt(`Quelle est votre lettre? ${lettresTrouve}`);
-
-            presente = lettresAttendues.indexOf(userLetter);
-            alreadyType = mauvaisesLettres.indexOf(userLetter);
-            if (mauvaisesLettres.indexOf(userLetter) !==-1 || lettresTrouve.indexOf(userLetter) !== -1){
-            //if (alreadyType !==-1){
-                console.log(`Vous avez déjà rentre ${userLetter}`);
-                console.log(`Il vous reste ${playerTry} essais.`);
-                playerTry--;
-            }
-            else{
                 if(presente !== -1){
-                    console.log(`La lettre "${userLetter}" fait bien partie du mot!`);
-                    console.log(lettresAttendues); //pour verifier
-                    while (presente !== -1){ //Boucle pour retirer la lettre si elle existe plusieur fois
-                        lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
-                        //console.log("Whouhou! Vous avez trouvez une lettre"); //Plus besoin car lettre évoqué plus haut
-                        presente = lettresAttendues.indexOf(userLetter);
-                        lettresTrouve.push(userLetter);
-                    }
-                    console.log(lettresAttendues); //Facultatif pour verifier
-                    console.log(`Il vous reste ${playerTry} essais.`);
-                    playerTry--;
-                ;
+                    lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+                    console.log("Whouhou! Vous avez trouvez une lettre");
                 }
                 else{
                     mauvaisesLettres.push(userLetter);
                     console.log("Coin! Try again");
-                    playerTry-- ;
-                    console.log(`Il vous reste ${playerTry} essais.`);
-    
                 }
+                console.log(mauvaisesLettres);
+                console.log(mauvaisesLettres.length);
+                playerTry-- ;
+                console.log(`Il vous reste ${playerTry} essais.`);
             }
-            console.log(mauvaisesLettres); //Facultatif pour vérif
-            console.log(mauvaisesLettres.length); // Facultatif pour verif
-            //playerTry-- ;
-            console.log(`Il vous reste ${playerTry} essais.`);
         }
-        }    
-        </script>
+    }
+</script>
+<!----- Exo Jeux Pendu Complixifié-->
+<!-------- On indique au joueur si une lettre à déjà été tapé-->
+<!-------- On retire tous les lettres en double-->
+ <script>
+    function hangManGameEnhaced(){
+        var mauvaisesLettres =[]
+        var lettresAttendues = ['k', 'a', 'y', 'a', 'k']
+        var playerTry = 10
+        var lettresTrouve = []
+        console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+
+        for (i = 1; i <= 11; i++){
+            if (playerTry == 0){
+                console.log(`Dommage c'est perdu! Le mot attendu était ${lettresAttendues}`);
+            } 
+            else if (lettresAttendues == 0){
+                console.log(`Bravo c'est gagné! Le mot attendu était ${lettresAttendues}`);
+            }
+            else {
+                let userLetter = prompt(`Quelle est votre lettre? ${lettresTrouve}`);
+
+                presente = lettresAttendues.indexOf(userLetter);
+                alreadyType = mauvaisesLettres.indexOf(userLetter);
+                if (mauvaisesLettres.indexOf(userLetter) !==-1 || lettresTrouve.indexOf(userLetter) !== -1){
+                //if (alreadyType !==-1){
+                    console.log(`Vous avez déjà rentre ${userLetter}`);
+                    console.log(`Il vous reste ${playerTry} essais.`);
+                    playerTry--;
+                }
+                else{
+                    if(presente !== -1){
+                        console.log(`La lettre "${userLetter}" fait bien partie du mot!`);
+                        console.log(lettresAttendues); //pour verifier
+                        while (presente !== -1){ //Boucle pour retirer la lettre si elle existe plusieur fois
+                            lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+                            //console.log("Whouhou! Vous avez trouvez une lettre"); //Plus besoin car lettre évoqué plus haut
+                            presente = lettresAttendues.indexOf(userLetter);
+                            lettresTrouve.push(userLetter);
+                        }
+                        console.log(lettresAttendues); //Facultatif pour verifier
+                        console.log(`Il vous reste ${playerTry} essais.`);
+                        playerTry--;
+                    ;
+                    }
+                    else{
+                        mauvaisesLettres.push(userLetter);
+                        console.log("Coin! Try again");
+                        playerTry-- ;
+                        console.log(`Il vous reste ${playerTry} essais.`);
+        
+                    }
+                }
+                console.log(mauvaisesLettres); //Facultatif pour vérif
+                console.log(mauvaisesLettres.length); // Facultatif pour verif
+                //playerTry-- ;
+                console.log(`Il vous reste ${playerTry} essais.`);
+            }
+            }         
+    }
+</script>
     <!----- VERSION FINALE COURTE (A MON NIVEAU HEIN)-------->
     <!-- Alert à la place des consoles log, variable sur une ligne-->
-    <script>
-    var mauvaisesLettres =[], lettresAttendues = ['k', 'a', 'y', 'a', 'k'], playerTry = 10, lettresTrouve = [];
-    alert(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
-    for (i = 1; i <= 11; i++){
-        if (playerTry == 0){
-            alert(`Dommage c'est perdu! Le mot attendu était kayak`);
-        } 
-        else if (lettresAttendues == 0){
-            alert(`Bravo c'est gagné! Le mot attendu était kayak`);
-            i=11;
-        }
-        else {
-            let userLetter = prompt(`Quelle est votre lettre? ${lettresTrouve}`);
-            presente = lettresAttendues.indexOf(userLetter);
-            alreadyType = mauvaisesLettres.indexOf(userLetter);
-            if (mauvaisesLettres.indexOf(userLetter) !==-1 || lettresTrouve.indexOf(userLetter) !== -1){
-                alert(`Vous avez déjà rentre ${userLetter}`);
-                playerTry--;                
-                alert(`Il vous reste ${playerTry} essais.`);
+<script>
+    function hangManGameEnhacedAgain(){
+        var mauvaisesLettres =[], lettresAttendues = ['k', 'a', 'y', 'a', 'k'], playerTry = 10, lettresTrouve = [];
+        alert(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+        for (i = 1; i <= 11; i++){
+            if (playerTry == 0){
+                alert(`Dommage c'est perdu! Le mot attendu était kayak`);
+            } 
+            else if (lettresAttendues == 0){
+                alert(`Bravo c'est gagné! Le mot attendu était kayak`);
+                i = 11;
             }
-            else{
-                if(presente !== -1){
-                    alert(`La lettre "${userLetter}" fait bien partie du mot!`);
-                    while (presente !== -1){ //Boucle pour retirer la lettre si elle existe plusieur fois
-                        lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
-                        presente = lettresAttendues.indexOf(userLetter);
-                        lettresTrouve.push(userLetter);
-                    }
-                    playerTry--;
+            else {
+                let userLetter = prompt(`Quelle est votre lettre? ${lettresTrouve}`);
+                presente = lettresAttendues.indexOf(userLetter);
+                alreadyType = mauvaisesLettres.indexOf(userLetter);
+                if (mauvaisesLettres.indexOf(userLetter) !==-1 || lettresTrouve.indexOf(userLetter) !== -1){
+                    alert(`Vous avez déjà rentre ${userLetter}`);
+                    playerTry--;                
                     alert(`Il vous reste ${playerTry} essais.`);
                 }
                 else{
-                    mauvaisesLettres.push(userLetter);
-                    alert(`Coin! Try again la lettre "${userLetter}" ne fait pas parti du mot.`);
-                    playerTry-- ;
-                    alert(`Il vous reste ${playerTry} essais.`);
+                    if(presente !== -1){
+                        alert(`La lettre "${userLetter}" fait bien partie du mot!`);
+                        while (presente !== -1){ //Boucle pour retirer la lettre si elle existe plusieur fois
+                            lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+                            presente = lettresAttendues.indexOf(userLetter);
+                            lettresTrouve.push(userLetter);
+                        }
+                        playerTry--;
+                        if(lettresAttendues.length !== 0){
+                        alert(`Il vous reste ${playerTry} essais.`);
+                        }
+                        else{}
+                    }
+                    else{
+                        mauvaisesLettres.push(userLetter);
+                        alert(`Coin! Try again la lettre "${userLetter}" ne fait pas parti du mot.`);
+                        playerTry-- ;
+                        alert(`Il vous reste ${playerTry} essais.`);
+                    }
                 }
+                // alors on véruille pas son pc ?
             }
+            } 
+    }
+</script>
+<!--------------------- EXO PLAYLIST MUSIC--------------->
+<section>
+    <div> Coucou
+        <ul><button onclick="displayPlaylist()">Ma playlist</button></ul>
+        <ul><button onclick="addToPlaylist()">Ajouter un morceau</button></ul>
+        <ul><button>Supprimer second morceau</button></ul>
+    </div>
+</section>
+<script>
+
+    playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
+
+    // La fonction displayPlaylist affiche la playlist
+    function displayPlaylist(){
+        for ( i = 0 ; i < playlistUser.length;i++){
+            console.log(`Titre ${i+1}. ` + playlistUser[i]);
         }
-        } 
-    </script>
+    }
+    // displayPlaylist(); ------- Sert juste à tester
+
+    // Demande à l'user quel morceau il souhaite ajouter
+    function addToPlaylist(){
+        newSong = prompt("Ma playlist" + playlistUser + "\n" + "Quel morceau voulez-vous ajouter?");        
+        //ajoute le morceau à la playlist
+        playlistUser.push(newSong);
+        if (playlistUser.length >= 10){
+            userChoice = Prompt("Votre playlist contient déjà 10 morceaux. Si vous ajoutez un nouveau morceau, le 1er de votre playlist sera supprimer. Souhaitez-vous quand même ajouter ce morceau? (oui/non)")
+            if (userChoice == "oui"){
+                playlistUser.splice(0 , 1);
+            }
+            else{}
+        }
+        else{
+        }            
+    }
+    displayPlaylist();
+    console.log("Votre playlist contient " + playlistUser.length + " morceaux.")
+</script>
+
+<script>
+        playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
+        
+</script>
 </body>
 </html>
