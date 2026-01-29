@@ -182,38 +182,32 @@ console.log(jours[2]);
     var playerTry = 10
     console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
 
-    for (i = 1; i <= 10; i++){
-        if (mauvaisesLettres.length > 10){
-            console.log("Dommage c'est perdu")
+    for (i = 1; i <= 11; i++){
+        if (mauvaisesLettres.length >= 10){
+            console.log("Dommage c'est perdu");
         } 
         else if (lettresAttendues == 0){
-            console.log("Bravo c'est gagné")
+            console.log("Bravo c'est gagné");
         }
         else {
-            let userLetter = prompt("Quel est votre lettre?")
+            let userLetter = prompt("Quel est votre lettre?");
 
-            presente = lettresAttendues.indexOf(userLetter)
+            presente = lettresAttendues.indexOf(userLetter);
 
             if(presente !== -1){
-                lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1)
-                console.log("Whouhou! Vous avez trouvez une lettre")
+                lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+                console.log("Whouhou! Vous avez trouvez une lettre");
             }
             else{
-                mauvaisesLettres.push(userLetter)
-                console.log("Coin! Try again")
+                mauvaisesLettres.push(userLetter);
+                console.log("Coin! Try again");
             }
-            console.log(mauvaisesLettres)
-            console.log(mauvaisesLettres.length)
-            playerTry--
-            console.log(`Il vous reste ${playerTry} essais.`)
+            console.log(mauvaisesLettres);
+            console.log(mauvaisesLettres.length);
+            playerTry-- ;
+            console.log(`Il vous reste ${playerTry} essais.`);
         }
-        //OPTIONEL CAR VOUS AVEZ PERDU NE FONCTIONNE PAS
-        if (mauvaisesLettres.length == 10){
-            console.log("Vous avez perdu");
-        }else{
-            console.log("Vous avez gagné");
-            }
-        }
+    }
     
     </script>
     <!-- <script>
@@ -226,5 +220,106 @@ console.log(jours[2]);
         // Même chose mais écrit différement
     }    
 </script> -->
+<!----- EXo JEux PEndu Complixifié-->
+<!-------- On indique au joueur si une lettre à déjà été tapé-->
+<!-------- On retire tous les lettres en double-->
+ <script>
+    var mauvaisesLettres =[]
+    var lettresAttendues = ['k', 'a', 'y', 'a', 'k']
+    var playerTry = 10
+    var lettresTrouve = []
+    console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+
+    for (i = 1; i <= 11; i++){
+        if (playerTry == 0){
+            console.log(`Dommage c'est perdu! Le mot attendu était ${lettresAttendues}`);
+        } 
+        else if (lettresAttendues == 0){
+            console.log(`Bravo c'est gagné! Le mot attendu était ${lettresAttendues}`);
+        }
+        else {
+            let userLetter = prompt(`Quelle est votre lettre? ${lettresTrouve}`);
+
+            presente = lettresAttendues.indexOf(userLetter);
+            alreadyType = mauvaisesLettres.indexOf(userLetter);
+            if (mauvaisesLettres.indexOf(userLetter) !==-1 || lettresTrouve.indexOf(userLetter) !== -1){
+            //if (alreadyType !==-1){
+                console.log(`Vous avez déjà rentre ${userLetter}`);
+                console.log(`Il vous reste ${playerTry} essais.`);
+                playerTry--;
+            }
+            else{
+                if(presente !== -1){
+                    console.log(`La lettre "${userLetter}" fait bien partie du mot!`);
+                    console.log(lettresAttendues); //pour verifier
+                    while (presente !== -1){ //Boucle pour retirer la lettre si elle existe plusieur fois
+                        lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+                        //console.log("Whouhou! Vous avez trouvez une lettre"); //Plus besoin car lettre évoqué plus haut
+                        presente = lettresAttendues.indexOf(userLetter);
+                        lettresTrouve.push(userLetter);
+                    }
+                    console.log(lettresAttendues); //Facultatif pour verifier
+                    console.log(`Il vous reste ${playerTry} essais.`);
+                    playerTry--;
+                ;
+                }
+                else{
+                    mauvaisesLettres.push(userLetter);
+                    console.log("Coin! Try again");
+                    playerTry-- ;
+                    console.log(`Il vous reste ${playerTry} essais.`);
+    
+                }
+            }
+            console.log(mauvaisesLettres); //Facultatif pour vérif
+            console.log(mauvaisesLettres.length); // Facultatif pour verif
+            //playerTry-- ;
+            console.log(`Il vous reste ${playerTry} essais.`);
+        }
+        }    
+        </script>
+    <!----- VERSION FINALE COURTE (A MON NIVEAU HEIN)-------->
+    <!-- Alert à la place des consoles log, variable sur une ligne-->
+    <script>
+    var mauvaisesLettres =[], lettresAttendues = ['k', 'a', 'y', 'a', 'k'], playerTry = 10, lettresTrouve = [];
+    alert(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+    for (i = 1; i <= 11; i++){
+        if (playerTry == 0){
+            alert(`Dommage c'est perdu! Le mot attendu était kayak`);
+        } 
+        else if (lettresAttendues == 0){
+            alert(`Bravo c'est gagné! Le mot attendu était kayak`);
+            i=11;
+        }
+        else {
+            let userLetter = prompt(`Quelle est votre lettre? ${lettresTrouve}`);
+            presente = lettresAttendues.indexOf(userLetter);
+            alreadyType = mauvaisesLettres.indexOf(userLetter);
+            if (mauvaisesLettres.indexOf(userLetter) !==-1 || lettresTrouve.indexOf(userLetter) !== -1){
+                alert(`Vous avez déjà rentre ${userLetter}`);
+                playerTry--;                
+                alert(`Il vous reste ${playerTry} essais.`);
+            }
+            else{
+                if(presente !== -1){
+                    alert(`La lettre "${userLetter}" fait bien partie du mot!`);
+                    while (presente !== -1){ //Boucle pour retirer la lettre si elle existe plusieur fois
+                        lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+                        presente = lettresAttendues.indexOf(userLetter);
+                        lettresTrouve.push(userLetter);
+                    }
+                    playerTry--;
+                    alert(`Il vous reste ${playerTry} essais.`);
+                }
+                else{
+                    mauvaisesLettres.push(userLetter);
+                    alert(`Coin! Try again la lettre "${userLetter}" ne fait pas parti du mot.`);
+                    playerTry-- ;
+                    alert(`Il vous reste ${playerTry} essais.`);
+                }
+            }
+        }
+        } 
+    </script>
 </body>
 </html>
