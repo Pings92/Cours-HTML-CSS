@@ -325,13 +325,13 @@ console.log(jours[2]);
     }
 </script>
 <!--------------------- EXO PLAYLIST MUSIC--------------->
-<section>
+<!-- <section>
     <div> Coucou
         <ul><button onclick="displayPlaylist()">Ma playlist</button></ul>
         <ul><button onclick="addToPlaylist()">Ajouter un morceau</button></ul>
         <ul><button>Supprimer second morceau</button></ul>
     </div>
-</section>
+</section> -->
 <script>
 
     playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
@@ -364,8 +364,45 @@ console.log(jours[2]);
 </script>
 
 <script>
-        playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
+        let playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
+        let addNewSong = "";
         
+        for( i = 0; i <= 10; i++){
+            let lastAddedSong = playlistUser[playlistUser.indexOf(addNewSong)];
+
+            addNewSong = prompt("Ma playlist : " + playlistUser.join(' - ') 
+            + "\n" + "Votre playlist contient " + playlistUser.length + " morceaux."
+            + "\n" + "Le dernier morceau ajouté est " + lastAddedSong
+            + "\n" + "Quel morceau voulez-vous ajouter? (Titre ou Stop)");
+
+            if(addNewSong == "stop"){
+                break;
+            }
+            else{
+                if (playlistUser.length >= 10){
+                    replaceSong = prompt("Votre playlist contient déjà 10 titres. Souhaitez-vous supprimer le deuxième titre? o/n")
+                    if (replaceSong == "o"){
+                        playlistUser[1] = addNewSong;
+                    }
+                    else if (replaceSong == "n"){
+                        playlistUser.push(addNewSong);
+                        playlistUser.splice(0,1);
+                    }
+                    else{
+                    }
+                }        
+                else{ //playlist inférieur à 10 titres
+                    replaceSong = prompt("Souhaitez-vous supprimer le deuxième titre? o/n")
+                    if (replaceSong == "o"){
+                        playlistUser[1] = addNewSong;
+                    }
+                    else{
+                        playlistUser.push(addNewSong);
+                    }
+                }
+            }
+        }
+
 </script>
 </body>
 </html>
