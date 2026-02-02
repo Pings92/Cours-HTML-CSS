@@ -9,98 +9,98 @@
     <h1>Produit</h1>
 <script>
 //--------------TENTATIVE 2-----------------------------
-function compare(choix1,choix2){
-        if (choix1 == choix2){
-            return "Match nul";
-        }
-        if (choix1 == "Pierre"){
-            if (choix2 == "Ciseaux"){
-                return "ordi";
-            } else{
-                return "joueur";
-            }
-        } else if (choix1 == "Ciseaux"){    
-            if (choix2 == "Feuille"){
-                return "ordi";
-            } else {
-                return "joueur";
-            }
-        } else if (choix1 == "Feuille"){
-            if (choix2 == "Pierre"){
-                return "ordi";
-            } else {
-                return "joueur";
-            }
-        }
-    }
+// function compare(choix1,choix2){
+//         if (choix1 == choix2){
+//             return "Match nul";
+//         }
+//         if (choix1 == "Pierre"){
+//             if (choix2 == "Ciseaux"){
+//                 return "ordi";
+//             } else{
+//                 return "joueur";
+//             }
+//         } else if (choix1 == "Ciseaux"){    
+//             if (choix2 == "Feuille"){
+//                 return "ordi";
+//             } else {
+//                 return "joueur";
+//             }
+//         } else if (choix1 == "Feuille"){
+//             if (choix2 == "Pierre"){
+//                 return "ordi";
+//             } else {
+//                 return "joueur";
+//             }
+//         }
+//     }
 
-function chiFouMi(){
-    let playerScore = 0;
-    let computerScore = 0;
+// function chiFouMi(){
+//     let playerScore = 0;
+//     let computerScore = 0;
 
-    for(i = 0; i < 3; i++){
+//     for(i = 0; i < 3; i++){
 
-    // Génération nombre ordi
-        let computerChoice = Math.random() < 0.33 ? "Pierre" : Math.random() < 0.66 ? "Feuille" : "Ciseaux";
+//     // Génération nombre ordi
+//         let computerChoice = Math.random() < 0.33 ? "Pierre" : Math.random() < 0.66 ? "Feuille" : "Ciseaux";
 
-        console.log("Choix de l'ordi " + computerChoice)
-        //Saisie nombre du joueur
-        let playerChoice = prompt("Choisissez parmis Pierre, Feuille, Ciseaux");
-        console.log("Saisie du joueur : " + playerChoice)
-        let result = compare(computerChoice, playerChoice);
+//         console.log("Choix de l'ordi " + computerChoice)
+//         //Saisie nombre du joueur
+//         let playerChoice = prompt("Choisissez parmis Pierre, Feuille, Ciseaux");
+//         console.log("Saisie du joueur : " + playerChoice)
+//         let result = compare(computerChoice, playerChoice);
 
-        if (result == "joueur"){
-            playerScore++;
-        }else{
-            computerScore++;
-        }
-    }
+//         if (result == "joueur"){
+//             playerScore++;
+//         }else{
+//             computerScore++;
+//         }
+//     }
         
-        console.log("Score Joueur" + playerScore + " Score Ordi" + computerScore)
+//         console.log("Score Joueur" + playerScore + " Score Ordi" + computerScore)
 
-    if (playerScore > computerScore){
-        alert("Le joueur a gagné : " + playerScore + "-" + computerScore)
-    }else{
-        alert("L'ordi a gagné : " + computerScore + "-" + playerScore)
-    }
-}   
+//     if (playerScore > computerScore){
+//         alert("Le joueur a gagné : " + playerScore + "-" + computerScore)
+//     }else{
+//         alert("L'ordi a gagné : " + computerScore + "-" + playerScore)
+//     }
+// }   
   //chiFouMi()
 </script>
 <!------------Exo Pair et Impair--------->
 <script>
-    function pairImpair(){
-        let pair = 0;
-        let impair = 0;
-        for (i = 0; i < 20 ; i++){
-            if (i%2 == 0){
-                pair++
-            }
-            else{
-                impair++;
-            }
-        }
-        //alert("Il y a " + pair +" nombre pairs et " + impair + "nombre impairs.")
-        alert(`Il y a ${pair} nombre pair et ${impair} nombre impair`)        
-    }
+    // function pairImpair(){
+    //     let pair = 0;
+    //     let impair = 0;
+    //     for (i = 0; i < 20 ; i++){
+    //         if (i%2 == 0){
+    //             pair++
+    //         }
+    //         else{
+    //             impair++;
+    //         }
+    //     }
+    //     //alert("Il y a " + pair +" nombre pairs et " + impair + "nombre impairs.")
+    //     alert(`Il y a ${pair} nombre pair et ${impair} nombre impair`)        
+    // }
 </script>
 <!--------------- table de multiplication ------------------>
 <script>
-    function multiplicationTable(){
-        for (i = 1; i <= 5; i++){
-            for (j = 1 ; j<=10 ; j++){
-                result= j*i;
-                if (result >= 30){
-                    console.log(`${i} x ${j} = ${result} GROS RESULTAT`);
-                }
-                else if (result%5 == 0){
-                    console.log(`${i} x ${j} = ${result} Multiple de 5`);
-                }
-                else{
-                    console.log(`${i} x ${j} = ${result}`);
-                }
-            }
-        }        
-    }
+    // function multiplicationTable(){
+    //     for (i = 1; i <= 5; i++){
+    //         for (j = 1 ; j<=10 ; j++){
+    //             result= j*i;
+    //             if (result >= 30){
+    //                 console.log(`${i} x ${j} = ${result} GROS RESULTAT`);
+    //             }
+    //             else if (result%5 == 0){
+    //                 console.log(`${i} x ${j} = ${result} Multiple de 5`);
+    //             }
+    //             else{
+    //                 console.log(`${i} x ${j} = ${result}`);
+    //             }
+    //         }
+    //     }        
+    // }
 </script>
 <!-------------- COURS --------------------------------->
 <script>
@@ -124,96 +124,96 @@ function chiFouMi(){
 </script>
 <!--------EXO 7 ------------>
 <script>
-let jours=['lun', '007', 'mer', 'jeu', 'ven', 'sam', "BUG"];
-//1
-jours.pop();
-//2
-console.log(jours);
-//3
-jours.push('dim');
-//4
-jours[1]= 'mar';
-//5
-console.log(jours.length);
-//6
-console.log(jours[2]);
+// let jours=['lun', '007', 'mer', 'jeu', 'ven', 'sam', "BUG"];
+// //1
+// jours.pop();
+// //2
+// console.log(jours);
+// //3
+// jours.push('dim');
+// //4
+// jours[1]= 'mar';
+// //5
+// console.log(jours.length);
+// //6
+// console.log(jours[2]);
 </script>
 <!-- -----------EXO PART2------------>
  <script>
-    let fruits = ['Mangue', 'Raisin', 'Figue', 'Kiwi'];
+//     let fruits = ['Mangue', 'Raisin', 'Figue', 'Kiwi'];
 
-    console.log (fruits); // 1. afficher leste des fruits dispo 
-    clientOrder = prompt(`Quel fruit désirez-vous? (${fruits})`); // 2. Demander quel fruit au client
+//     console.log (fruits); // 1. afficher leste des fruits dispo 
+//     clientOrder = prompt(`Quel fruit désirez-vous? (${fruits})`); // 2. Demander quel fruit au client
 
-    disponibility = fruits.indexOf(clientOrder);
-    if (disponibility == -1){
-            console.log("indisponible");
-        }
-        else{
-            console.log("ok!")
-            for (j = 0; j <= fruits.length; j++){
-                if (fruits[j] == clientOrder){
-                    fruits.splice(j,1);
-                }else{
-                }
-        }
-    }
-    console.log (fruits);
- </script>
- <!----- Version sans boucle for -------->
- <script>
-    let fruits = ['Mangue', 'Raisin', 'Figue', 'Kiwi'];
+//     disponibility = fruits.indexOf(clientOrder);
+//     if (disponibility == -1){
+//             console.log("indisponible");
+//         }
+//         else{
+//             console.log("ok!")
+//             for (j = 0; j <= fruits.length; j++){
+//                 if (fruits[j] == clientOrder){
+//                     fruits.splice(j,1);
+//                 }else{
+//                 }
+//         }
+//     }
+//     console.log (fruits);
+//  </script>
+//  <!----- Version sans boucle for -------->
+//  <script>
+//     let fruits = ['Mangue', 'Raisin', 'Figue', 'Kiwi'];
 
-    console.log (fruits); // 1. afficher leste des fruits dispo 
-    clientOrder = prompt(`Quel fruit désirez-vous? (${fruits})`); // 2. Demander quel fruit au client
+//     console.log (fruits); // 1. afficher leste des fruits dispo 
+//     clientOrder = prompt(`Quel fruit désirez-vous? (${fruits})`); // 2. Demander quel fruit au client
 
-    disponibility = fruits.indexOf(clientOrder);
+//     disponibility = fruits.indexOf(clientOrder);
 
-    if (disponibility !== -1){
-        fruits.splice(fruits.indexOf(clientOrder),1)
-        console.log("ok")
-    }
-    else{
-        console.log("indisponible");
-    }
-    console.log (fruits);
+//     if (disponibility !== -1){
+//         fruits.splice(fruits.indexOf(clientOrder),1)
+//         console.log("ok")
+//     }
+//     else{
+//         console.log("indisponible");
+//     }
+//     console.log (fruits);
  </script>
 
  <!--------------------JEU DU PENDU---------------------->
  <script>
-    function hangManGame(){
-        var mauvaisesLettres =[]
-        var lettresAttendues = ['s', 'u', 'p', 'e', 'r']
-        var playerTry = 10
-        console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
+    // function hangManGame(){
+    //     var mauvaisesLettres =[]
+    //     var lettresAttendues = ['s', 'u', 'p', 'e', 'r']
+    //     var playerTry = 10
+    //     console.log(`Le mot attendu contient ${lettresAttendues.length} lettres.`)
 
-        for (i = 1; i <= 11; i++){
-            if (mauvaisesLettres.length >= 10){
-                console.log("Dommage c'est perdu");
-            } 
-            else if (lettresAttendues == 0){
-                console.log("Bravo c'est gagné");
-            }
-            else {
-                let userLetter = prompt("Quel est votre lettre?");
+    //     for (i = 1; i <= 11; i++){
+    //         if (mauvaisesLettres.length >= 10){
+    //             console.log("Dommage c'est perdu");
+    //         } 
+    //         else if (lettresAttendues == 0){
+    //             console.log("Bravo c'est gagné");
+    //         }
+    //         else {
+    //             let userLetter = prompt("Quel est votre lettre?");
 
-                presente = lettresAttendues.indexOf(userLetter);
+    //             presente = lettresAttendues.indexOf(userLetter);
 
-                if(presente !== -1){
-                    lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
-                    console.log("Whouhou! Vous avez trouvez une lettre");
-                }
-                else{
-                    mauvaisesLettres.push(userLetter);
-                    console.log("Coin! Try again");
-                }
-                console.log(mauvaisesLettres);
-                console.log(mauvaisesLettres.length);
-                playerTry-- ;
-                console.log(`Il vous reste ${playerTry} essais.`);
-            }
-        }
-    }
+    //             if(presente !== -1){
+    //                 lettresAttendues.splice(lettresAttendues.indexOf(userLetter),1);
+    //                 console.log("Whouhou! Vous avez trouvez une lettre");
+    //             }
+    //             else{
+    //                 mauvaisesLettres.push(userLetter);
+    //                 console.log("Coin! Try again");
+    //             }
+    //             console.log(mauvaisesLettres);
+    //             console.log(mauvaisesLettres.length);
+    //             playerTry-- ;
+    //             console.log(`Il vous reste ${playerTry} essais.`);
+    //         }
+    //     }
+    // }
 </script>
 <!----- Exo Jeux Pendu Complixifié-->
 <!-------- On indique au joueur si une lettre à déjà été tapé-->
@@ -334,75 +334,142 @@ console.log(jours[2]);
 </section> -->
 <script>
 
-    playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
+    // playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
 
-    // La fonction displayPlaylist affiche la playlist
-    function displayPlaylist(){
-        for ( i = 0 ; i < playlistUser.length;i++){
-            console.log(`Titre ${i+1}. ` + playlistUser[i]);
-        }
-    }
-    // displayPlaylist(); ------- Sert juste à tester
+    // // La fonction displayPlaylist affiche la playlist
+    // function displayPlaylist(){
+    //     for ( i = 0 ; i < playlistUser.length;i++){
+    //         console.log(`Titre ${i+1}. ` + playlistUser[i]);
+    //     }
+    // }
+    // // displayPlaylist(); ------- Sert juste à tester
 
-    // Demande à l'user quel morceau il souhaite ajouter
-    function addToPlaylist(){
-        newSong = prompt("Ma playlist" + playlistUser + "\n" + "Quel morceau voulez-vous ajouter?");        
-        //ajoute le morceau à la playlist
-        playlistUser.push(newSong);
-        if (playlistUser.length >= 10){
-            userChoice = Prompt("Votre playlist contient déjà 10 morceaux. Si vous ajoutez un nouveau morceau, le 1er de votre playlist sera supprimer. Souhaitez-vous quand même ajouter ce morceau? (oui/non)")
-            if (userChoice == "oui"){
-                playlistUser.splice(0 , 1);
-            }
-            else{}
-        }
-        else{
-        }            
-    }
-    displayPlaylist();
-    console.log("Votre playlist contient " + playlistUser.length + " morceaux.")
+    // // Demande à l'user quel morceau il souhaite ajouter
+    // function addToPlaylist(){
+    //     newSong = prompt("Ma playlist" + playlistUser + "\n" + "Quel morceau voulez-vous ajouter?");        
+    //     //ajoute le morceau à la playlist
+    //     playlistUser.push(newSong);
+    //     if (playlistUser.length >= 10){
+    //         userChoice = Prompt("Votre playlist contient déjà 10 morceaux. Si vous ajoutez un nouveau morceau, le 1er de votre playlist sera supprimer. Souhaitez-vous quand même ajouter ce morceau? (oui/non)")
+    //         if (userChoice == "oui"){
+    //             playlistUser.splice(0 , 1);
+    //         }
+    //         else{}
+    //     }
+    //     else{
+    //     }            
+    // }
+    // displayPlaylist();
+    // console.log("Votre playlist contient " + playlistUser.length + " morceaux.")
 </script>
 
 <script>
-        let playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
-        let addNewSong = "";
+        // let playlistUser = ['Macarena', 'La Vie en Rose', 'Gnomi au lait', 'Cry me a River','5','6','7','8','9','10'];
+        // let addNewSong = "";
         
-        for( i = 0; i <= 10; i++){
-            let lastAddedSong = playlistUser[playlistUser.indexOf(addNewSong)];
+        // for( i = 0; i <= 10; i++){
+        //     let lastAddedSong = playlistUser[playlistUser.indexOf(addNewSong)];
 
-            addNewSong = prompt("Ma playlist : " + playlistUser.join(' - ') 
-            + "\n" + "Votre playlist contient " + playlistUser.length + " morceaux."
-            + "\n" + "Le dernier morceau ajouté est " + lastAddedSong
-            + "\n" + "Quel morceau voulez-vous ajouter? (Titre ou Stop)");
+        //     addNewSong = prompt("Ma playlist : " + playlistUser.join(' - ') 
+        //     + "\n" + "Votre playlist contient " + playlistUser.length + " morceaux."
+        //     + "\n" + "Le dernier morceau ajouté est " + lastAddedSong
+        //     + "\n" + "Quel morceau voulez-vous ajouter? (Titre ou Stop)");
 
-            if(addNewSong == "stop"){
-                break;
-            }
-            else{
-                if (playlistUser.length >= 10){
-                    replaceSong = prompt("Votre playlist contient déjà 10 titres. Souhaitez-vous supprimer le deuxième titre? o/n")
-                    if (replaceSong == "o"){
-                        playlistUser[1] = addNewSong;
-                    }
-                    else if (replaceSong == "n"){
-                        playlistUser.push(addNewSong);
-                        playlistUser.splice(0,1);
-                    }
-                    else{
-                    }
-                }        
-                else{ //playlist inférieur à 10 titres
-                    replaceSong = prompt("Souhaitez-vous supprimer le deuxième titre? o/n")
-                    if (replaceSong == "o"){
-                        playlistUser[1] = addNewSong;
-                    }
-                    else{
-                        playlistUser.push(addNewSong);
-                    }
-                }
-            }
-        }
+        //     if(addNewSong == "stop"){
+        //         break;
+        //     }
+        //     else{
+        //         if (playlistUser.length >= 10){
+        //             replaceSong = prompt("Votre playlist contient déjà 10 titres. Souhaitez-vous supprimer le deuxième titre? o/n")
+        //             if (replaceSong == "o"){
+        //                 playlistUser[1] = addNewSong;
+        //             }
+        //             else if (replaceSong == "n"){
+        //                 playlistUser.push(addNewSong);
+        //                 playlistUser.splice(0,1);
+        //             }
+        //             else{
+        //             }
+        //         }        
+        //         else{ //playlist inférieur à 10 titres
+        //             replaceSong = prompt("Souhaitez-vous supprimer le deuxième titre? o/n")
+        //             if (replaceSong == "o"){
+        //                 playlistUser[1] = addNewSong;
+        //             }
+        //             else{
+        //                 playlistUser.push(addNewSong);
+        //             }
+        //         }
+        //     }
+        // }
 
+</script>
+<!--------- EXERCICE 8 LES OBJETS ------------>
+<script>
+var annuaire = {
+    Riri : '06 66 66 66 66',
+    Fifi : '07 77 77 77 77',
+    Loulou : '08 88 88 88 88',
+    Donald : '06 78 92 45 30',
+    Picsou : '07 45 21 34 56',
+    Yagami : '09 99 99 99 99',
+    Ryûk : '10 00 00 00 00',
+};
+
+///console.log(annuaire.Patricia); // afficher le num de Patricia
+// Recherche contact
+function searchContact(){
+    userDemand = prompt("De qui souhaitez-vous le numéro: (Patricia/David/Pierre/Paul/Jacques)");
+    alert(`Le numéro de ${userDemand} est ${annuaire[userDemand]}`); 
+}    
+//console.log("Le numéro de " + userDemand + " est " + annuaire[userDemand]);
+
+//Afficher la liste des contacts de l'annuaire
+function showContact(){
+    for(const property in annuaire){ //on peut mettre le nom qu'on veut à la place de property 
+        alert(`${property}: ${annuaire[property]}`);
+    }
+    // Code de Jerem à essayer de comprendre
+    // let liste = "Liste des contacts :\n";
+    // for (let nom in annuaire) {
+    //     liste += nom + " : " + annuaire[nom] + "\n";
+    //     //liste + nom = liste;
+    // }
+}
+//Ajout d'un nouvel élément dans l'objet => objet.prop = value
+function addContact(){
+    firstName = prompt("Qui souhaitez-vous ajouter?");
+    phoneNumber = prompt("Quel est son numéro de téléphone?");
+    annuaire[firstName] = phoneNumber;
+    alert("Le " + annuaire[firstName] + " numéro de " + firstName + " a été ajouté à l'annuaire" )
+}
+//Suppression d'un contact
+function deleteContact(){
+    userToDelete = prompt("Quel contact souhaitez-vous supprimer de votre liste?");
+    delete annuaire[userToDelete];
+}
+//Choix user pour faire une action
+// "r" rechercher / "l" afficher la liste / "a" ajouter / "s" supprimer
+let interrupt = ""
+while (interrupt !== "q"){
+    interrupt = prompt('Que souhaitez vous faire? ("q" pour stopper ) \n r : Rechercher un contact \n l : Afficher la liste des contacts \n a : Ajouter un contact \n s : Supprimer un contact')
+    switch (interrupt){
+        case "r":
+            searchContact();
+            break;
+        case "l":
+            showContact();
+            break;
+        case "a":
+            addContact();
+            break;
+        case "s":
+            deleteContact();
+            break;
+        default:
+            alert("Désolé votre instruction n'existe pas. \n r : Rechercher un contact \n l : Afficher la liste des contacts \n a : Ajouter un contact \n s : Supprimer un contact \n q : quitter ")
+    }
+}
 </script>
 </body>
 </html>
