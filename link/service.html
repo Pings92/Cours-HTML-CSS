@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nos formules</title>
+    <link rel="stylesheet" href="styleService.css">
 </head>
 <body>
     <!--DEBUT DU HEADER-->
@@ -27,71 +28,64 @@
     <main>
         <h2>Découvrez nos formules</h2> <!-- Titre formulaire-->
         <!-- Tableau formule-->
-        <Section class="formuleChart"> 
-    <table>
+        <Section class="formuleChart" id="chaton"> 
+    <table class="myCalculateBody">
+        <!-- <div class="resultDisplay"><label for="" id="resultBox">Le résultat s'affichera là</label></div> -->
+        <div class="resultDisplay"><input type="text" name="lala" id="resultBox">Le résultat s'affichera là</div>
         <tr tableColumns>
-            <th>rien ou image</th>
-            <th class="rowHeader">Formule classique</th>
-            <th class="rowHeader">Formule premium</th>
-            <th class="rowHeader">Formule Galaxie</th>
+            <th><button>DEL</button></th>
+            <th class="rowHeader"><button>AC</button></th>
+            <th class="rowHeader"><button>%</button></th>
+            <th class="rowHeader"><button>/</button></th>
         </tr>
         <tr>
-            <td>Vol surobitale (franchir la ligne de Karman)</td>
-            <td><img src="../image/inclus.png" alt="Compris dans la formule"></td>
-            <td></td>
-            <td>a</td>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button>X</button></td>
         </tr>
         <tr>
-            <td>Séjour prolongé en orbite terreste</td>
-            <td><img src="../image/inclus.png" alt="Compris dans la formule"></td>
-            <td></td>
-            <td></td>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button>-</button></td>
         </tr>
         <tr>
-            <td>Formation prévol</td>
-            <td><img src="../image/inclus.png" alt="Compris dans la formule"></td>
-            <td></td>
-            <td></td>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button>+</button></td>
         </tr>
         <tr>
-            <td>Repas spaciaux gastronomique</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Cabine individuelle avec hublot panoramique</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Activité en apesanteur (marche flotté, jeux spatiaux)</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Certificat de vol cosmique</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Cadeau souvenir (poussière de la planète ymbolique, etc)</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Observation astronomique guidée</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><button>+/-</button></td>
+            <td><button>0</button></td>
+            <td><button>,</button></td>
+            <td><button>=</button></td>
         </tr>
     </table>
 
         </Section>
+        <!------------------- Exo JS 9-->
+    <form action="">
+        <label for = "nom">Nom</label>
+        <input id = "nom" value = "BLANC-CAIRE" type="text">
+        <label for = "prenom">Prenom</label>
+        <input id = "prenom" value = "Michel" type="text">
+    </form>
+    <button id="dreamButton" onclick = direBonjour()> Faites moi rêver</button>
+
+    <form action="">
+        <label for = "premierNombre"> 1er nombre </label>
+        <input type = "text" name = "" id = "premier-nombre">
+        <label for = "deuxiemeNombre"> 2eme Nombre </label>
+        <input type = "text" name = "" id = "deuxieme-nombre">
+        <label for = "resultat "> Resultat </label>
+        <input type = "text" name = "resultat" id = "resultat">
+        <button id = "mon-bouton" type = "button"> Calculer </button>
+    </form>
     </main>
+<script src="service.js"> </script>
+
+</div>
 </body>
 </html>

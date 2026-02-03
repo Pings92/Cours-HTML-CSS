@@ -3,19 +3,23 @@
 flex-direction: column-reverse; */
   /* transform: rotate(90deg); */
 }
-td img{
-    width: 5%;
-}
+
 tr{
     text-align: center;
 }
 table{
     /* border: solid 1px; */
-    width: 50%;
+    width: 40%;
 }
 td{
-    border-bottom: dotted 1px;
+    /* border-bottom: dotted 1px; */
 }
 .tableHeader{
     
+}
+/*Mise en forme calculatrice*/
+.myCalculateBody button{
+    color: blueviolet;
+    background-color: aqua;
+    width: 80px;
 }

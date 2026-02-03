@@ -471,5 +471,50 @@ while (interrupt !== "q"){
     }
 }
 </script>
+<!-- EXERCICE INSTACIATION DE -->
+<script>
+    class Etudiant {
+        constructor(age){
+                this.age = age;
+            }
+        }
+    let etudiant1 = new Etudiant("34");
+    
+    alert (etudiant1.age)
+
+</script>
+<script>
+    class Etudiant {
+        constructor(lastName, firstName, gender, age, gradeLevel){
+            this.lastName = lastName;
+            this.firstName = firstName;     
+            this.gender = gender;
+            this.age = age;
+            this.gradeLevel = gradeLevel;
+            }
+        }
+    let etudiant2 = new Etudiant("Maupassant","Guy","" ,"" ,"Nograde" );
+    
+    alert (etudiant2.gradeLevel)
+</script>
+<script>
+    class Etudiant {
+        constructor(identity){
+            identity{
+                this.lastName = lastName;
+                this.firstName = firstName;     
+                this.gender = gender;
+                this.age = age;
+                this.gradeLevel = gradeLevel;
+            }
+        }
+    }
+
+    let etudiant2 = new Etudiant("Maupassant","Guy","" ,"" ,"Nograde" );
+    
+    alert (etudiant2.gender)    
+</script>
+
+
 </body>
 </html>
