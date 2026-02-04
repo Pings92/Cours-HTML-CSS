@@ -23,3 +23,8 @@ td{
     background-color: aqua;
     width: 80px;
 }
+
+/* EXO 10*/
+.hidden {
+  display: none;
+}

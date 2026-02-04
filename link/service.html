@@ -26,9 +26,24 @@
     </header>
     <!--FIN DU HEADER-->
     <main>
-        <h2>Découvrez nos formules</h2> <!-- Titre formulaire-->
+        <!------------------------ Exo 10---------------->
+        <p id="premier">texte visible</p>
+        <p id="second" class="hidden">ce texte devrait être caché</p>
+        <!-- Fin exo 10 -->
+        <!-------------------------EXO 10 Part2----------->
+        <p onclick="colorSwipe(this)">C'est l'histoire d'un garçon troublé</p>
+        <button type = "button" id = "showSpoilerButton" onclick = showHide()>Afficher la suite</button>
+        <p class="spoiler">car il s'avère que son ours en peluche a disparu</p>
+        <p class="spoiler">mais finalement il le retrouve</p>
+        <p class="spoiler"> pas de bol</p>
+        <p class="spoiler">c'était pas le sien</p>
+        <!---------------------FIN EXO 10 Part2----------->
+        <!-------------------------EXO 10 Part3----------->
+        <p id="premierBis">texte important</p>
+        <p id="secondBis" onclick="testSurbri()">autre texte</p>
+        <!---------------------FIN EXO 10 Part3----------->        <h2>Découvrez nos formules</h2> <!-- Titre formulaire-->
         <!-- Tableau formule-->
-        <Section class="formuleChart" id="chaton"> 
+        <Section class="formuleChart" id="chaton">
     <table class="myCalculateBody">
         <!-- <div class="resultDisplay"><label for="" id="resultBox">Le résultat s'affichera là</label></div> -->
         <div class="resultDisplay"><input type="text" name="lala" id="resultBox">Le résultat s'affichera là</div>
