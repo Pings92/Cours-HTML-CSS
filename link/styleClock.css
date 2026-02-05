@@ -1,4 +1,30 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    /* background-color: rgba(109, 74, 74, 0.792); */
+    font-weight:bolder;
+}
+main{
+    margin-top: 20px;
+    padding: 5%;
+    width: 50%;
+    background-color: rgba(16, 76, 205, 0.568);
+    border: solid rgb(135, 4, 120) 2px;
+    box-shadow: 0 0 15px #bc21ac;
+}
 span{
     border: solid black 1px;
-    width: 33%;
+    width: 20%;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.hoursDisplay{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+p{
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }

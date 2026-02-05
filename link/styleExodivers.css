@@ -1,0 +1,9 @@
+.feuTricolore p{
+    border: solid black 2px;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+#redLight{
+    background-color: red;
+}
