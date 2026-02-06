@@ -86,8 +86,7 @@ function trafficLight(){
         console.log("OHHHHHHH NON CA NE PASSE PAS") 
     }
 }
-    setInterval(trafficLight, 2000);
-    trafficLight()
+    // setInterval(trafficLight, 2000); a decomenter pour activer
 
 //--------- EXERCICE II Feu tricolore inspiration Léa => jouer sur l'opacité
 // function feuTricolore{
@@ -97,3 +96,16 @@ function trafficLight(){
 //     let vert = document.getElementById('lumiereVert');
 
 // }
+
+// //--------- EXERCICE 3 Modale
+
+const element = document.getElementById("myBtn");
+element.addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+
+  // dans cette fonction modifier la classe de mon element avec l'id maModal pour mettre en display: block;
+  // modifier la couleur du background en gris
+  document.get
+}

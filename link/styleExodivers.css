@@ -35,3 +35,22 @@
 #lumiereVerte{
     background-color: green;
 }
+
+/* EXERCICE 3 MODALE */
+#myModal{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(89, 84, 94, 0.276);
+    max-width: 30%;
+    align-content: center;
+    border: solid black 1px;
+    border-radius: 4px;
+
+    /* display: none; */
+}
+#myModal span{
+    display: flex;
+    align-self: flex-end;
+    background-color: rgb(237, 239, 239);
+    font-weight: bolder;
+}
