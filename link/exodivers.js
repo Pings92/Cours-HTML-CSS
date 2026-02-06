@@ -52,8 +52,48 @@
 
 // palindrome("kayak")
 
-//EXERCICE II Feu tricolore
+//EXERCICE II Feu tricolore version Piérick initiale
 function trafficLight(){
-    let feuRouge = document.getElementById('redlight');
-    if (document.getElementById('redlight').getAttribute('background-color'))
+
+    let feuRouge = document.getElementById('redLight');
+    let feuJaune = document.getElementById('orangeLight');
+    let feuVert = document.getElementById('greenLight');
+
+// feuRouge.getAttribute('backgroundColor') 
+
+    if (feuRouge.style.backgroundColor == "") {
+        feuRouge.style.backgroundColor = 'red';
+        feuJaune.style.backgroundColor = 'white';
+        feuVert.style.backgroundColor = 'white';
+        console.log("Si valeur nulle")
+    }
+
+    else if (feuRouge.style.backgroundColor == 'red'){
+        feuRouge.style.backgroundColor = 'white';
+        feuJaune.style.backgroundColor = 'yellow';
+        console.log("Cas lumière rouge")
+    }else if (feuJaune.style.backgroundColor == 'yellow'){
+        feuJaune.style.backgroundColor = 'white';
+        feuVert.style.backgroundColor = "green";
+        console.log("cas lumière jaune")
+    } else if (feuVert.style.backgroundColor == 'green'){
+        feuVert.style.backgroundColor = "white";
+        feuRouge.style.backgroundColor = 'red';
+        console.log("Cas lumière verte")
+    }
+
+    else{
+        console.log("OHHHHHHH NON CA NE PASSE PAS") 
+    }
 }
+    setInterval(trafficLight, 2000);
+    trafficLight()
+
+//--------- EXERCICE II Feu tricolore inspiration Léa => jouer sur l'opacité
+// function feuTricolore{
+
+//     let rouge = document.getElementById('lumiereRouge');
+//     let jaune = document.getElementById('lumiereJaune');
+//     let vert = document.getElementById('lumiereVert');
+
+// }

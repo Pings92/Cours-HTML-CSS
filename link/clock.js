@@ -24,7 +24,9 @@ function compteur(){
         console.log(clockSeconds)
     }
 
-setInterval(compteur),1000;
+setInterval(compteur 1000);
+// setInterval(compteur),1000; a vérifier
+
 compteur();
 // console.log(compteur)
 
