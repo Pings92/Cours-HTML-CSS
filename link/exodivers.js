@@ -194,9 +194,6 @@ class spell{
             console.log(`Santé: ${this.health} PV`);
             console.log(`Attaque: ${this.strenght}`);
             console.log(`Titre: ${this.titre}`);
-            // console.log(`Nom: ${this.bonusStat}`);
-
-            // return this.showCaracter;
         }
         }
 
@@ -214,9 +211,7 @@ class spell{
         }
         showCaracterStat(){
             super.showCaracter();
-        // return this.showCaracter + `it's a` + this.bonusStat
             console.log (`Caractéristique Bonus: ${this.bonusStat}`)
-        // console.log(this.bonusStat)
       }
     }
 
