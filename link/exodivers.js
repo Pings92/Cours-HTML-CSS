@@ -99,13 +99,140 @@ function trafficLight(){
 
 // //--------- EXERCICE 3 Modale
 
-const element = document.getElementById("myBtn");
-element.addEventListener("click", myFunction);
+  const openModal = document.getElementById('openModal');
+  const modale = document.getElementById('modale');
+  const closeCross = document.querySelector('.closeCross');
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
+  openModal.addEventListener("click", () => {
+    modale.style.display = 'block';
+});
 
-  // dans cette fonction modifier la classe de mon element avec l'id maModal pour mettre en display: block;
-  // modifier la couleur du background en gris
-  document.get
+closeCross.addEventListener("click", () => {
+      modale.style.display = 'none';
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === modale) {
+    modale.style.display = 'none';
+  }
+});
+
+// ---------------- EXERCICE 4
+
+class maCalculatrice{
+    constructor(listeDeNombre){
+        this.numberList = listeDeNombre;
+    }
+    ajouter(){
+        let total = 0;
+        for (let nombre of this.numberList) {
+            total += nombre;
+        }
+        return total;
+    }
+    afficher(){
+        const resultat = this.ajouter() 
+        console.log(resultat);
+    }
 }
+
+let maListe = [0,4,7,8]; //C'est une instance
+const resultNumber = new maCalculatrice(maListe) ;
+resultNumber.afficher();
+
+let testt = [6,2,9,2,0,2] //C'est une instance
+const resultNumber2 = new maCalculatrice(testt) ;
+resultNumber2.afficher();
+
+//---------------- EXERCICE 5
+// on aura deux classe arme et sort , avec plusieur parametre soit plusieur sort et plusieur arme
+class weapon{
+    constructor(knife, sword, hammer, wateringCan, fishingRod){
+    // constructor(weaponList){
+            this.knife = knife;
+            this.sword = sword;
+            this.hammer = hammer;
+            this.wateringCan = wateringCan;
+            this.fishingRod = fishingRod;
+        }
+    showWeapon(){
+        let arme1 = this.knife
+        console.log(arme1);
+        }
+    }
+
+    // let test = ("Kunai acéré" , "Epée de feu", "Marteau de Thor", "Arrosoir Doré", "Attrape Truite")
+    let mesArmes = new weapon("Kunai acéré" , "Epée de feu", "Marteau de Thor", "Arrosoir Doré", "Attrape Truite" )
+    // let mesArmes = new weapon(test)
+    mesArmes.showWeapon();
+
+class spell{
+    constructor(summon, ice, fire){
+            this.summon = summon;
+            this.ice = ice;
+            this.fire = fire;
+        }
+    showSpell(){
+        let summonSpell = this.summon;
+        console.log(summonSpell);
+        }
+    }
+    let mesSorts = new spell("Yojimbo");
+    mesSorts.showSpell();
+
+
+    // EXERCICE 6
+    class personnage {
+        constructor(nom, health, strenght, titre){
+            this.nom = nom;
+            this.health = health;
+            this.strenght = strenght;
+            this.titre = titre;
+        }
+        showCaracter(){
+            console.log(`Nom: ${this.nom}`);
+            console.log(`Santé: ${this.health} PV`);
+            console.log(`Attaque: ${this.strenght}`);
+            console.log(`Titre: ${this.titre}`);
+            // console.log(`Nom: ${this.bonusStat}`);
+
+            // return this.showCaracter;
+        }
+        }
+
+    class thief extends personnage{
+        constructor(nom, health, strenght, titre, bonusStat){
+            super (nom, health, strenght, titre);
+            this.bonusStat = bonusStat;
+        }            
+    }
+
+    class monk extends personnage{
+        constructor(nom, health, strenght, titre, bonusStat){
+            super (nom, health, strenght, titre);
+            this.bonusStat = bonusStat;
+        }
+        showCaracterStat(){
+            super.showCaracter();
+        // return this.showCaracter + `it's a` + this.bonusStat
+            console.log (`Caractéristique Bonus: ${this.bonusStat}`)
+        // console.log(this.bonusStat)
+      }
+    }
+
+    class redMage extends personnage{
+        constructor(nom, health, strenght, titre, bonusStat){
+            super (nom, health, strenght, titre);
+            this.bonusStat = bonusStat;
+        }            
+    }
+
+    class shovelKnight extends personnage{
+        constructor(nom, health, strenght, titre, bonusStat){
+            super (nom, health, strenght, titre);
+            this.bonusStat = bonusStat;
+        }            
+    }            
+    
+    let personnagePrincipal = new monk("Jean", "1000", "120", "moine", "High PV / High Def")
+    personnagePrincipal.showCaracterStat();
