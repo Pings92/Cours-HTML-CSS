@@ -286,7 +286,8 @@ class spell{
     tableau = [-6, 45, 32, -72, 0, -23, 39];
     const positifNegatif = tableau.map((x) => x > 0 ? "+" : x < 0 ? "-" : "0" );
     console.log(positifNegatif);
-
+    // map parcours le tableau et crée un nouveau tableau
+    
     // ------------- Debut pas bon
     // for (i = 0; i <= tableau.length; i++){
     //     positifNegatif = tableau[i] > 0 ? tableau.map("+") :tableau[i] < 0 ? tableau.map("-") : tableau.map(0);
@@ -327,7 +328,50 @@ class spell{
 // ----------- Exercice 7 BON
 
     tableau = ["papepipopu", "babe", "caceci", "dad", "crabe", "tatetito", "melon", "fa", "gageg", "lalelilolu"];    
-    motLong = tableau.filter((motDuTableau) => motDuTableau.length == 6 );
+    motLong = tableau.filter((motDuTableau) => motDuTableau.length == 5 ? true:false);
     console.log(motLong);
 
-// -------------- EXERCICE 8 
+// -------------- EXERCICE 8 bon
+let personnes = [
+    {nom : "Alice", age: 22}
+    {nom : "Marc", age: 65}
+    {nom : "Adrien", age: 15}
+    {nom : "Harris", age: 38}
+];
+majeures = personnes.filter(personneVise => personneVise.age >= 18 ? true : false)
+console.log(majeures)
+
+// exercice 9 REDUCE bon
+
+    tableau = [-6, 30, 45, 32, -72, 0, -23, 39];
+    valeurInitiale = 0;
+    let sommeTotale = tableau.reduce( (accumulateur, currentValue) => accumulateur + currentValue, valeurInitiale,
+);
+
+console.log(sommeTotale)
+
+// exercice 10 REDUCE bon
+    tableau = [3, 4, 2, 4];
+    valeurInitiale = 1;
+    let produitTotal = tableau.reduce( (accumulateur, currentValue) => accumulateur * currentValue, valeurInitiale,
+);
+    console.log(produitTotal)
+
+ // EXERCICE 11
+    // tentative pas bonne
+    //  tableau = ['k', 'a', 'y', 'a', 'k'];
+    // motUser = prompt("Rentrez un mot")
+    // motUser = motUser.split("")
+    // console.log(motUser)
+    // valeurInitiale = 0;
+    // let nbrVoyelle = motUser.reduce( (accumulateur, currentValue) => currentValue == "a" || currentValue == "e" ||currentValue == "i" ||currentValue == "o" ||currentValue == "u" ||currentValue == "y"? accumulateur++ : console.log("capte pas"), valeurInitiale); 
+    // console.log(nbrVoyelle)
+    // // fin tentative 11 pas bon
+
+    //exo 11 bon
+    motUser = prompt("Rentrez un mot")
+    const voyelles = "aeiouy"
+    let nbrVoyelle = motUser.split("").reduce( (accumulateur, currentValue) => voyelles.includes(currentValue) ? accumulateur + 1 : accumulateur, 0); 
+    //includes prend chaque caractère de la variable indépendemment (chaque lettre de la variable séparement)
+    console.log(nbrVoyelle)
+    // fin exo 11 bon
