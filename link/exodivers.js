@@ -371,7 +371,7 @@ console.log(sommeTotale)
     //exo 11 bon
     motUser = prompt("Rentrez un mot")
     const voyelles = "aeiouy"
-    let nbrVoyelle = motUser.split("").reduce( (accumulateur, currentValue) => voyelles.includes(currentValue) ? accumulateur + 1 : accumulateur, 0); 
+    let nbrVoyelle = motUser.split("").reduce((compteur, lettre) => voyelles.includes(lettre) ? compteur + 1 : compteur, 0); 
     //includes prend chaque caractère de la variable indépendemment (chaque lettre de la variable séparement)
     console.log(nbrVoyelle)
     // fin exo 11 bon
